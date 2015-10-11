@@ -1,3 +1,5 @@
+Aplikacija je napravljena za studente koji nemaju puno vremena za ucenje, pa moraju da se odluce koja ce pitanja ostaviti iza sebe. Random ispitna pitanja je aplikacija koje se malo igra Boga, pokazivajuci vam pitanja koja biste trebali da naucite. Na Vama je ostalo :)
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
