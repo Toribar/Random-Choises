@@ -47,6 +47,13 @@ class MainController extends Controller
 
 		$total = count($questions);
 
+		if ($total == 0)
+		{
+			Session::flash('errorMessage', 'Desila se greska');
+
+			return redirect('/');
+		}
+
 		//3.Napunimo session array chosenQuestions sa random pitanjima
 		while ( count($chosenQuestions) < $count)
 		{

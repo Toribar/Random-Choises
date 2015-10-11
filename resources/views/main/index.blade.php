@@ -18,6 +18,10 @@
 		<div class="container">
 			<h1 class="page-header">Random ispitna pitanja</h1>
 
+			@if ($errorMessage = Session::get('errorMessage'))
+				<div class="alert alert-warning">{{ $errorMessage }}</div>
+			@endif
+
 			<div class="row">
 				<div class="col-md-6">
 					<div class="panel panel-primary">
