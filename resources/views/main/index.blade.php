@@ -8,7 +8,7 @@
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<title>Random Ispitna Pitanja</title>
+		<title>Generator timova</title>
 
 	</head>
 
@@ -16,7 +16,7 @@
 
 	<body>
 		<div class="container">
-			<h1 class="page-header">Random ispitna pitanja</h1>
+			<h1 class="page-header">Generator timova</h1>
 
 			@if ($errorMessage = Session::get('errorMessage'))
 				<div class="alert alert-warning">{{ $errorMessage }}</div>
@@ -29,14 +29,14 @@
 							<a class="btn btn-danger btn-xs pull-right" href="{{ url('clear') }}">
 								<span class="glyphicon glyphicon-trash"> </span>
 							</a>
-						Sva ispitna pitanja
+						Lista igrača koji će bitku biti
 						</div>
 
 						<ul class="list-group">
 							@forelse ($questions as $question)
 								<li class="list-group-item">{{ $question }}</li>
 							@empty
-								<li class="list-group-item text-muted">Unesite pitanja</li>
+								<li class="list-group-item text-muted">Unesite sve igrače</li>
 							@endforelse
 						</ul>
 
@@ -58,11 +58,11 @@
 
 				<div class="col-md-6">
 					<div class="panel panel-primary">
-						<div class="panel-heading">Random ispitna pitanja </div>
+						<div class="panel-heading">Nasumično generisan tim</div>
 
 						<ul class="list-group">
-							@forelse ($chosenQuestions as $randomPitanje)
-								<li class="list-group-item">{{ $randomPitanje }}</li>
+							@forelse ($chosenQuestions as $randomTeam)
+								<li class="list-group-item">{{ $randomTeam }}</li>
 							@empty
 							 	<li class="list-group-item text-muted">Kliknite na random</li>
 							@endforelse
@@ -77,11 +77,11 @@
 			   	<div class="col-md-4 col-md-offset-4">
 					<form action="{{ url('random') }}" method="post">
 						<div class="input-group input-group-lg">
-							<input name="count" type="text" class="form-control text-center" placeholder="Broj random pitanja" value="{{ Session::get('randomCount', 3) }}">
+							<input name="count" type="text" class="form-control text-center" placeholder="Broj igraca" value="{{ Session::get('randomCount', 6) }}">
 
 							<span class="input-group-btn">
 							   	<button class="btn btn-primary" type="submit ">
-									<span class="glyphicon glyphicon-refresh"></span>Random
+									<span class="glyphicon glyphicon-refresh"></span>Generiši igrače
 								 </button>
 							</span>
 						</div>
