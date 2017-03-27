@@ -81,7 +81,7 @@
 
 							<span class="input-group-btn">
 							   	<button class="btn btn-primary" type="submit ">
-									<span class="glyphicon glyphicon-refresh"></span>Generiši igrače
+									<span class="glyphicon glyphicon-refresh"></span>Generiši tim
 								 </button>
 							</span>
 						</div>
