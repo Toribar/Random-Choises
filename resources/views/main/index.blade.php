@@ -33,8 +33,8 @@
 						</div>
 
 						<ul class="list-group">
-							@forelse ($questions as $question)
-								<li class="list-group-item">{{ $question }}</li>
+							@forelse ($questions as $serial => $player)
+								<li class="list-group-item">{{$serial + 1}}. {{ $player }}</li>
 							@empty
 								<li class="list-group-item text-muted">Unesite sve igrače</li>
 							@endforelse
@@ -43,7 +43,7 @@
 						<div class="panel-body">
 							<form action="{{ url('add') }}" method="post">
 								<div class="input-group">
-							      	<input name="newQuestion" type="text" class="form-control" placeholder="Unesite novo pitanje...">
+							      	<input name="newQuestion" type="text" class="form-control" placeholder="Unesite igrača...">
 
 								    <span class="input-group-btn btn-primary">
 								       	<button class="btn btn-primary" type="submit ">
@@ -61,8 +61,8 @@
 						<div class="panel-heading">Nasumično generisan tim</div>
 
 						<ul class="list-group">
-							@forelse ($chosenQuestions as $randomTeam)
-								<li class="list-group-item">{{ $randomTeam }}</li>
+							@forelse ($chosenQuestions as $serial => $player)
+								<li class="list-group-item">{{$serial + 1}}. {{ $player }}</li>
 							@empty
 							 	<li class="list-group-item text-muted">Kliknite na random</li>
 							@endforelse
