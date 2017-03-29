@@ -66,6 +66,7 @@ class MainController extends Controller
 			$chosenQuestions[$randomIndex] = $chosenQuestion;
 
 		}
+
 		Session::set('chosenQuestions', $chosenQuestions);
 
 		return redirect('/');
