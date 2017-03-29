@@ -47,7 +47,7 @@ class MainController extends Controller
 
 		$total = count($questions);
 
-		if ($total == 0)
+		if ($total == 0 || $count >= $total)
 		{
 			Session::flash('errorMessage', 'Desila se greska');
 
